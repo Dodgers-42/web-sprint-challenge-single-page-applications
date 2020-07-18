@@ -82,13 +82,36 @@ const PizzaForm = (props) => {
                 {errors.name.length > 0 && <p style={{color:'red'}}>{errors.name}</p>}
       </label>
       <label>
-        <input/>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='sausage' value='sausage' />
+          Sausage
       </label>
       <label>
-        <input/>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='ham' value='ham' />
+          Ham
       </label>
       <label>
-        <input/>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='mushrooms' value='mushrooms' />
+          Mushrooms
+      </label>
+      <label>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='olives' value='olives' />
+          Olives
+      </label>
+      <label>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='cheese' value='cheese' />
+          Cheese
+      </label>
+      <label>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='onion' value='onion' />
+          Onion
+      </label>
+      <label>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='jalapeno' value='jalapeno' />
+          Jalapeno
+      </label>
+      <label>
+          <input type='checkbox' name='toppings' onChange={handleChange} data-cy='bacon' value='bacon' />
+          Bacon
       </label>
       </form>
     </FormContainer>
