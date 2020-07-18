@@ -44,11 +44,42 @@ const PizzaForm = (props) => {
         .then(valid => setErrors({...errors, [e.target.name]: ''}))
         .catch(err => setErrors({...errors, [e.target.name]: err.errors[0]}));
     }
+
+    const handleChange = e => {
+      if (e.target.type === 'checkbox') {
+          setFormState({
+              ...formState,
+              condiments: {
+                  ...formState.condiments,
+                  [e.target.value]: e.target.checked
+              }
+          })
+      } else {
+          setFormState({
+              ...formState,
+              [e.target.name]: e.target.value
+          })
+      }
+      if (e.target.name === 'name' || e.target.name === 'phone') {
+          validate(e);
+      }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(formState);
+    axios.post("https://reqres.in/api/users", formState)
+    .then(res => props.addOrder(res.data))
+    .catch(err => console.log(err));
+}
+
+
   return (
     <FormContainer>
-      <form>
-      <label>
-        <input/>
+      <form onSubmit={handleSubmit}>
+            <label>Name
+                <input type='text' name='name' onChange={handleChange} data-cy='name' value={formState.name} />
+                {errors.name.length > 0 && <p style={{color:'red'}}>{errors.name}</p>}
       </label>
       <label>
         <input/>
