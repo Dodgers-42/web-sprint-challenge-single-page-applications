@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components'; 
 import HomePage from "./HomePage";
+import PizzaForm from "./PizzaForm";
 
 const App = () => {
+
+  const [orders, setOrders] = useState([]);
+
+  const addOrder = order => {
+    setOrders([...orders, order]);
+  }
+
   return (
     <AppContainer>
     <>
@@ -11,7 +19,7 @@ const App = () => {
       <p>You can remove this code and create your own header</p>
     </>
     <div>
-      <Pizza />
+      <PizzaForm />
       <HomePage orders={orders} />
     </div>
     </AppContainer>

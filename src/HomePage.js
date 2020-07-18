@@ -1,4 +1,8 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
+import burgerSplash from '../Wireframes/Pizza.jpg';
+import { Link } from '.react-router-dom';
+
 
 const HomePage = (props) => {
   return (
