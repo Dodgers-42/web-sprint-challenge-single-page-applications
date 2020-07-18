@@ -3,26 +3,25 @@ import styled from './styled-components';
 
 const OrderCard = ({ order }) => {
 
-    const displayCondiments = () => {
-        const condiments = Object.keys(order.condiments);
+    const displayToppings = () => {
+        const toppings = Object.keys(order.toppings);
 
-        const orderedCondiments = []
+        const orderedToppings = []
 
-        condiments.forEach(key => {
-            if (order.condiments[key]) {
-                orderedCondiments.push(key);
+        toppings.forEach(key => {
+            if (order.toppings[key]) {
+                orderedToppings.push(key);
             }
         })
-        return orderedCondiments;
+        return orderedToppings;
     }
     return (
         <div>
             <h2>{order.name}</h2>
             <h3>{order.phone}</h3>
-            <p>{order.bun}</p>
-            <p>{order.patties} patties</p>
-            {displayCondiments().map((condiment, i) => 
-            <p key={i}>{condiment}</p>)}
+            <p>{order.size}</p>
+            {displayToppings().map((toppings, i) => 
+            <p key={i}>{toppings}</p>)}
             <p>{order.instructions}</p>
         </div>
     );

@@ -10,7 +10,7 @@ const HomePage = (props) => {
     <div>
       <h1>Lambda Eats</h1>
       <p>Make It the Way You Want It!</p>
-      <Link to='/buildaburger'>Build Your Burger</Link>
+      <Link to='/'>Build Your Pizza</Link>
         {props.orders.map((order, i) => <OrderCard key={i} order={order} />)}
     </div>
   );

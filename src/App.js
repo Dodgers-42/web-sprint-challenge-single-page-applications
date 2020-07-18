@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HomePage from "./HomePage";
 import PizzaForm from "./PizzaForm";
 import NavBar from './/NavBar';
-import OrderCard from './OrderCard';
+// import OrderCard from './OrderCard';
 
 const App = () => {
 

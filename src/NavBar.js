@@ -1,6 +1,6 @@
-import React from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
-import styled from './node_modules/styled-components';
+import React from './react';
+import { Link } from './react-router-dom';
+import styled from './styled-components';
 
 const NavBar = props => {
     return (
