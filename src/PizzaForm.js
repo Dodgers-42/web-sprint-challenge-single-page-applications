@@ -75,7 +75,7 @@ const PizzaForm = (props) => {
 
 
   return (
-    <FormContainer>
+   
       <form onSubmit={handleSubmit}>
           <label>Name
                     <input type='text' name='name' onChange={handleChange} data-cy='name' value={formState.name} />
@@ -151,7 +151,7 @@ const PizzaForm = (props) => {
           </label>
             <button data-cy="submit-button" disabled={isDisabled} type='submit'>Order Your Pizza</button>
       </form>
-    </FormContainer>
+    
     
   );
 };

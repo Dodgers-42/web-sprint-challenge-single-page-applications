@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components'; 
 import HomePage from "./HomePage";
 import PizzaForm from "./PizzaForm";
+import NavBar from './/NavBar';
+import OrderCard from './OrderCard';
 
 const App = () => {
 
@@ -13,16 +15,18 @@ const App = () => {
   }
 
   return (
+    
     <AppContainer>
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
-    <div>
-      <PizzaForm />
-      <HomePage orders={orders} />
-    </div>
-    </AppContainer>
+      <NavBar />
+      <Switch>
+        <Route path='/'>
+          <PizzaForm addOrder={addOrder} />
+        </Route>
+        <Route exact path='/'>
+          <HomePage orders={orders} />
+        </Route>
+      </Switch>
+  </AppContainer>
   );
 };
 

@@ -1,17 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
-import burgerSplash from '../Wireframes/Pizza.jpg';
+// import styled from 'styled-components';
+// import Pizza from '../Wireframes/Pizza.jpg';
 import { Link } from '.react-router-dom';
+import OrderCard from './OrderCard';
 
 
 const HomePage = (props) => {
   return (
-    <HomeContainer>
+    <div>
       <h1>Lambda Eats</h1>
       <p>Make It the Way You Want It!</p>
       <Link to='/buildaburger'>Build Your Burger</Link>
         {props.orders.map((order, i) => <OrderCard key={i} order={order} />)}
-    </HomeContainer>
+    </div>
   );
 };
 export default HomePage;
