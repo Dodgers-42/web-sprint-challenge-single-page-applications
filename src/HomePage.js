@@ -1,7 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 // import Pizza from '../Wireframes/Pizza.jpg';
-import { Link } from '.react-router-dom';
+import { Link } from 'react-router-dom';
 import OrderCard from './OrderCard';
 
 

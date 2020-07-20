@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components'; 
 import HomePage from "./HomePage";
 import PizzaForm from "./PizzaForm";
-import NavBar from './/NavBar';
-// import OrderCard from './OrderCard';
+import NavBar from './NavBar';
+import OrderCard from './OrderCard';
 
 const App = () => {
 
@@ -13,19 +13,20 @@ const App = () => {
   const addOrder = order => {
     setOrders([...orders, order]);
   }
+// console.log(orders);
 
   return (
     
     <AppContainer>
       <NavBar />
-      <Switch>
+      {/* <Switch> */}
         <Route path='/'>
           <PizzaForm addOrder={addOrder} />
         </Route>
         <Route exact path='/'>
           <HomePage orders={orders} />
         </Route>
-      </Switch>
+      {/* </Switch> */}
   </AppContainer>
   );
 };
