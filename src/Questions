@@ -1,0 +1,24 @@
+Sprint Questions
+
+1. In 1-2 sentences, explain what React's useRouteMatch hook is used for.
+
+    The useRouteMatch hook is useful any time you are using a <Route> just so you can get access to its match data, including all of the times you might render a <Route> all by itself outside of a <Switch> 
+
+2. How would you explain form validation to someone who has never programmed before?
+
+    How do I validate a form before submitting?
+
+    Form Validation
+
+1. Implementing the Check. We're going to be checking the form using a function, which will be activated by the form's submit event — therefore, using the onSubmit handler. ...
+2. Text Boxes, <textarea>s and hiddens. These are the easiest elements to access. ...
+3. Select Boxes. ...
+4. Check Boxes. ...
+5. Radio Buttons.
+
+    Form validation is required to prevent web form abuse by malicious users. Improper validation of form data is one of the main causes of security vulnerabilities. It exposes your website to attacks such as header injections, cross-site scripting, and SQL injections.
+
+3. In 1-2 sentences, define end to end testing.
+
+End-to-end testing is a methodology used to test whether the flow of an application is performing as designed from start to finish. The purpose of carrying out end-to-end tests is to identify system dependencies and to ensure that the right information is passed between various system components and systems.
+
